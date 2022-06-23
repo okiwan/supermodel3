@@ -1,0 +1,10 @@
+# Binaries
+bin/*
+obj/*
+supermodel
+
+# ;-D
+Roms/*
+
+# Others
+*.log
