@@ -5,7 +5,7 @@ set -e
 cd ..
 
 echo "❌ Removing previous distribution"
-rm -f dist
+rm -rf dist
 
 echo "⚙️  Compiling"
 cp -f Makefiles/Makefile.OSX.SDL2 Makefile
