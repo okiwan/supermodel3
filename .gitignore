@@ -8,3 +8,5 @@ Roms/*
 
 # Others
 *.log
+dist/*
+.DS_Store
