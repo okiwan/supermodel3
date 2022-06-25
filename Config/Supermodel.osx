@@ -7,9 +7,9 @@
 
 New Engine = 0
 New3DEngine = 0
-XResolution = 1280
-YResolution = 1024
-FullScreen = 0
+XResolution = 1920
+YResolution = 1080
+FullScreen = 1 
 Network = 0
 SimulateNet = 1
 PortIn = 1970
@@ -177,15 +177,17 @@ InputJoy1RZDeadZone = 1
 InputJoy1YOffVal = -129
 InputJoy1YDeadZone = 1
 
+[ daytona2 ]
+
+InputGearShiftUp = NONE
+InputGearShiftDown = NONE
 
 [ scudau ]
 
-XResolution = 1920
-YResolution = 1080
 SoundVolume = 50
 MusicVolume = 200
+
 InputGearShiftUp = NONE
 InputGearShiftDown = NONE
 InputJoy1XSaturation = 150
-
 
