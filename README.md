@@ -4,5 +4,5 @@ Just a fork from the origin Super Model 3 emulator, prepared to be compiled on O
 
 All credit goes to Bart Trzynadlowski and his amazing team.
 
-[Original sources](http://www.supermodel3.com/)
-[Original license](./Docs/LICENSE.txt)
+* [Original sources](http://www.supermodel3.com/)
+* [Original license](./Docs/LICENSE.txt)
