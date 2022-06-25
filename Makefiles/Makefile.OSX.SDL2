@@ -56,9 +56,13 @@ LD = clang
 # SDL
 #
 
-SDL_CFLAGS = 
-SDL_LIBS = -framework AGL -framework OpenGL -framework GLUT -framework Cocoa
-#-framework SDL2 
+#
+#	Homebrew-based SDL2 specific paths
+#	Path for includes change, plus no framework is available
+#
+
+SDL_CFLAGS = -I/opt/homebrew/include/ -D_THREAD_SAFE
+SDL_LIBS = $(shell sdl2-config --libs) -framework AGL -framework OpenGL -framework GLUT -framework Cocoa
 ifeq ($(strip $(NET_BOARD)),1)
 	SDL_LIBS += -framework SDL2_net
 endif
@@ -67,8 +71,9 @@ endif
 #	OSX-specific
 #
 
-PLATFORM_CXXFLAGS = $(SDL_CFLAGS) -DSUPERMODEL_OSX -F/opt/homebrew/lib/ -O3 -F/Library/Frameworks/ -I/opt/homebrew/include -I/opt/homebrew/include/SDL2 -D_THREAD_SAFE
-PLATFORM_LDFLAGS = $(SDL_LIBS) -lz -lm -lstdc++ -F/opt/homebrew/lib/ -F/Library/Frameworks/ -L/opt/homebrew/Cellar/sdl2/2.0.22/lib -L/opt/homebrew/lib -lSDL2
+PLATFORM_CXXFLAGS = $(SDL_CFLAGS) -DSUPERMODEL_OSX -F/Library/Frameworks/ -O3
+PLATFORM_LDFLAGS = $(SDL_LIBS) -lz -lm -lstdc++ -F/Library/Frameworks/
+
 
 ###############################################################################
 # Core Makefile
